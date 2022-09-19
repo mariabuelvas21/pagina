@@ -1,0 +1,42 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+tbody{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body {
+  margin-bottom: 60px;
+  background-image: url("https://static.videezy.com/system/resources/thumbnails/000/010/889/original/yellow-bright-abstract-lights-bokeh-background.jpg");
+  background-size: cover;
+}
+  
+#titulo1{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: blue;
+}
+a{
+  text-decoration: none;
+  color: #920392;
+}
+p{
+  font-family: cursive;
+}
+.navbar-brand{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+color: rgb(252, 32, 4);
+}
+.nav-item{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(252, 32, 4);
+}

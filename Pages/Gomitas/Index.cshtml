@@ -1,0 +1,60 @@
+@page
+@model TrululuGomitas.Pages_Gomitas.IndexModel
+
+@{
+    ViewData["Title"] = "Indice";
+}
+
+<h1>La magia de la alegria</h1>
+
+<p>
+    <a asp-page="Create">Ingresar nuevo</a>
+</p>
+<form>
+    <p>
+        Tipo <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Buscar" />
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Gomita[0].Tipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gomita[0].FechadeEntrega)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gomita[0].presentacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gomita[0].Precio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Gomita) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechadeEntrega)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.presentacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Editar</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Detalle</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

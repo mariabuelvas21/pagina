@@ -1,0 +1,49 @@
+@page
+@model TrululuGomitas.Pages_Gomitas.CreateModel
+
+@{
+    ViewData["Title"] = "Super";
+}
+
+<h1>Nuevos Productos</h1>
+
+<h4>Gomita</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Gomita.Tipo" class="control-label"></label>
+                <input asp-for="Gomita.Tipo" class="form-control" />
+                <span asp-validation-for="Gomita.Tipo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gomita.FechadeEntrega" class="control-label"></label>
+                <input asp-for="Gomita.FechadeEntrega" class="form-control" />
+                <span asp-validation-for="Gomita.FechadeEntrega" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gomita.presentacion" class="control-label"></label>
+                <input asp-for="Gomita.presentacion" class="form-control" />
+                <span asp-validation-for="Gomita.presentacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gomita.Precio" class="control-label"></label>
+                <input asp-for="Gomita.Precio" class="form-control" />
+                <span asp-validation-for="Gomita.Precio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Volver a la lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
